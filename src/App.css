@@ -1,0 +1,116 @@
+/* Body */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #121212; /* Warna latar belakang yang lebih gelap */
+}
+
+/* Container utama */
+.App {
+  text-align: center;
+}
+
+/* Header */
+.App-header {
+  background-color: #000000;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(8px + 2vmin);
+  color: white;
+  padding: 40px 20px; /* Padding atas dan bawah yang lebih besar */
+}
+
+/* Link */
+.App-link {
+  color: #61dafb;
+}
+
+/* Container film */
+.Movie-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Wrapper untuk setiap film */
+.Movie-wrapper {
+  width: 90%; /* Lebar container film agar responsif */
+  max-width: 500px; /* Lebar maksimum untuk tampilan yang lebih besar */
+  background-color: rgba(86, 61, 231, 0.8); /* Warna latar belakang dengan transparansi */
+  color: white;
+  border-radius: 20px; /* Border radius yang lebih halus */
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(86, 61, 231, 0.5); /* Efek bayangan yang lebih transparan */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animasi transformasi dan bayangan */
+}
+
+/* Input pencarian film */
+.Movie-search {
+  height: 48px;
+  font-size: 24px;
+  margin-bottom: 32px;
+  padding: 16px;
+  font-weight: bold;
+  text-align: center;
+  width: 90%; /* Lebar input pencarian agar responsif */
+  max-width: 500px; /* Lebar maksimum untuk tampilan yang lebih besar */
+  background-color: rgba(255, 255, 255, 0.8); /* Transparansi untuk tampilan yang lebih modern */
+  border: none;
+  border-radius: 30px; /* Border radius untuk tampilan yang lebih modern */
+  outline: none;
+  transition: background-color 0.3s ease; /* Animasi perubahan warna latar belakang */
+}
+
+.Movie-search:focus {
+  background-color: rgba(255, 255, 255, 1); /* Warna latar belakang saat input diberi fokus */
+}
+
+/* Aturan CSS untuk layar yang lebih kecil, seperti perangkat mobile */
+@media only screen and (max-width: 768px) {
+  .Movie-wrapper {
+    width: 100%; /* Mengubah lebar container film agar responsif di perangkat mobile */
+  }
+
+  .Movie-search {
+    width: 100%; /* Mengubah lebar input pencarian agar responsif di perangkat mobile */
+    margin-bottom: 20px;
+  }
+}
+
+/* Judul film */
+.Movie-title {
+  height: 60px;
+  margin-top: 26px;
+  font-weight: bold;
+  font-size: 0.5 em; /* Ukuran font yang lebih besar */
+  color: white; /* Warna teks yang kontras dengan latar belakang */
+}
+
+/* Tanggal rilis film */
+.Movie-date {
+  margin-top: 10px; /* Mengurangi jarak antara judul dan tanggal */
+  font-style: italic;
+  color: white; /* Warna teks yang kontras dengan latar belakang */
+}
+
+/* Peringkat film */
+.Movie-rate {
+  margin-bottom: 20px; /* Mengurangi jarak di bagian bawah */
+  font-weight: bold;
+  font-size: 1.2em;
+  text-decoration: underline;
+  color: #61dafb; /* Warna peringkat yang kontras dengan latar belakang */
+}
+
+/* Efek hover pada film */
+.Movie-wrapper:hover {
+  transform: translateY(-5px); /* Translasi sedikit ke atas saat hover */
+  box-shadow: 0 0 40px rgba(86, 61, 231, 0.8); /* Bayangan yang lebih dramatis saat hover */
+}
